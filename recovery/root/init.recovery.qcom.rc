@@ -3,6 +3,18 @@ on fs
     symlink /dev/block/platform/soc.0/7824900.sdhci /dev/block/bootdevice
 
 on init 
+    chmod 0660 /dev/vm_bms
+    chown system system /dev/vm_bms
+    chmod 0660 /dev/battery_data
+    chown system system /dev/battery_data
+
+    chown root system /sys/bus/i2c/drivers/lc709203/batt_capacity
+    chmod 0660 /sys/bus/i2c/drivers/lc709203/batt_capacity
+    chown root system /sys/class/power_supply/bms/current_now
+    chown root system /sys/class/power_supply/bms/voltage_ocv
+    chmod 0664 /sys/class/power_supply/bms/current_now
+    chmod 0664 /sys/class/power_supply/bms/voltage_ocv
+	
 # needed to make qseecomd work in recovery
     chmod 0660 /dev/qseecom
     chown system drmrpc /dev/qseecom
@@ -16,6 +28,11 @@ service sbinqseecomd /sbin/qseecomd
     user root
     group root
     seclabel u:r:recovery:s0
+
+service vm_bms /sbin/vm_bms
+    user root
+    group root
+    seclabel u:r:init:s0
     
 on property:ro.crypto.state=encrypted
     start sbinqseecomd

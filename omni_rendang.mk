@@ -12,12 +12,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-## Specify phone tech before including full_phone
-$(call inherit-product, vendor/omni/config/gsm.mk)
+$(call inherit-product, build/target/product/embedded.mk)
 
 $(call inherit-product, device/smartfren/rendang/full_rendang.mk)
 
 # Inherit some common Omni stuff.
-$(call inherit-product, vendor/omni/config/common.mk)
+$(call inherit-product, vendor/batik/config/common.mk)
+
+PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=G36C1H
 
 PRODUCT_NAME := omni_rendang
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.hardware.keystore=msm8916

@@ -62,7 +62,6 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 # Recovery
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/recovery/root/etc/twrp.fstab
 TW_THEME := portrait_hdpi
-TW_INCLUDE_CRYPTO := true
 TW_MAX_BRIGHTNESS := 255
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 TW_DEFAULT_EXTERNAL_STORAGE := true
@@ -86,6 +85,12 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 
 # Encryption
 TARGET_HW_DISK_ENCRYPTION := true
+
+# Crypto
+TW_INCLUDE_CRYPTO := true
+TW_INCLUDE_FBE := true
+TW_INCLUDE_CRYPTO_FBE := true
+TW_CRYPTO_USE_SBIN_VOLD := true
 
 # exFAT FS Support
 TW_INCLUDE_FUSE_EXFAT := true

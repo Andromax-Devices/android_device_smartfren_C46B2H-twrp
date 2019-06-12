@@ -20,18 +20,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
-# Boot animation
-TARGET_SCREEN_HEIGHT := 1280
-TARGET_SCREEN_WIDTH := 720
-
 # Charger
 PRODUCT_PACKAGES += \
     charger_res_images \
     charger
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := rendang
-PRODUCT_NAME := full_rendang
+PRODUCT_DEVICE := C46B2H
+PRODUCT_NAME := full_C46B2H
 PRODUCT_BRAND := Smartfren
-PRODUCT_MODEL := Andromax G36C1H
+PRODUCT_MODEL := Andromax C46B2H
 PRODUCT_MANUFACTURER := Haier

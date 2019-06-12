@@ -16,7 +16,7 @@
 # Product-specific compile-time definitions.
 #
 
-LOCAL_PATH := device/smartfren/rendang
+LOCAL_PATH := device/smartfren/C46B2H
 
 FORCE_32_BIT := true
 TARGET_BOARD_VENDOR := smartfren
@@ -99,4 +99,4 @@ TW_INCLUDE_FUSE_EXFAT := true
 TW_INCLUDE_FUSE_NTFS := true
 
 # Official
-BR_OFFICIAL := true
+#BR_OFFICIAL := true

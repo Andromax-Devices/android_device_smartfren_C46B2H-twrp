@@ -14,14 +14,12 @@
 
 $(call inherit-product, build/target/product/embedded.mk)
 
-$(call inherit-product, device/smartfren/rendang/full_rendang.mk)
+$(call inherit-product, device/smartfren/C46B2H/full_C46B2H.mk)
 
 # Inherit some common Omni stuff.
-$(call inherit-product, vendor/batik/config/common.mk)
+$(call inherit-product, vendor/omni/config/common.mk)
 
-PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=G36C1H
-
-PRODUCT_NAME := omni_rendang
+PRODUCT_NAME := omni_C46B2H
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hardware.keystore=msm8916

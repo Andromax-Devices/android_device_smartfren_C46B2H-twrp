@@ -14,5 +14,5 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/omni_rendang.mk \
-	$(LOCAL_DIR)/full_rendang.mk
+	$(LOCAL_DIR)/omni_C46B2H.mk \
+	$(LOCAL_DIR)/full_C46B2H.mk
